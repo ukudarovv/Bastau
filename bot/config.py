@@ -6,12 +6,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Bot configuration
-BOT_TOKEN = "7716388596:AAEjJMs8kpKxMEpSBvMTpquqH9eMcoZq2V4"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
     raise ValueError("BOT_TOKEN environment variable is not set")
 
 # API configuration
-API_BASE_URL = os.getenv("API_BASE_URL", "http://127.0.0.1:8001/api")
+API_BASE_URL = os.getenv("API_BASE_URL", "http://127.0.0.1:8000/api")
 
 # Admin configuration
 ADMIN_TELEGRAM_ID = os.getenv("ADMIN_TELEGRAM_ID")
